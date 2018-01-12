@@ -12,7 +12,7 @@ npm으로 의존성 및 프로젝트 관리에 필요한 package.json 생성
 
 mocha는 Node.js, 브라우저, 비동기 테스트를 할 수 있는 javascript test framework 이다.
 
-mocha install 
+mocha 설치
 ```bash
 # npm install mocha -g
 ```
@@ -39,7 +39,7 @@ Should :
 * expect와 동일한 BBD 스타일의 chainable language이다.  
 * IE 호환성 문제가 발생한다.
 
-chai install
+chai 설치
 * npm install 'module' 에서 --save 옵션은 로컬에 모듈을 설치하면서 자동으로 package.json의 dependencies에 업데이트
 ```bash
 # npm install chai --save-dev
