@@ -45,8 +45,6 @@ chai 설치
 # npm install chai --save-dev
 ```
 
-## test case
-
 ## test 
 * test 디렉토리의 테스트 파일을 실행한다. (단일 파일 선택가능)
 * --recursive 는 서브 디렉토리를 포함하여 테스트한다.
