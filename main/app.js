@@ -3,8 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const NODE_ENV = process.env.NODE_ENV;
-const PORT = 3000;
 const HOSTNAME = '127.0.0.1';
+let port = process.env.PORT || (process.argv[2] || 3000);
 
 /*
 const server = http.createServer((req, res) => {
@@ -22,7 +22,7 @@ server.listen(PORT, HOSTNAME, () => {
 const express = require('express');
 
 /* routes */
-var routes = require('./routes/index.js');
+let routes = require('./routes/index.js');
 
 /* express instance */
 const app = express();
@@ -52,6 +52,7 @@ const app = express();
 
 
 app.use('/', routes);
+port = (typeof port === "number") ? port : 3000;
 
 
 // var server   = http.createServer(app);
@@ -59,7 +60,8 @@ app.use('/', routes);
 //   console.log("Node server running on http://localhost:1337");
 // });
 // const server = http.createServer(app);
-app.listen(PORT, () => {
+
+app.listen(port, () => {
     console.log('Example app listening on port 3000!');
 });
 
